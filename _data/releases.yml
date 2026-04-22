@@ -1,3 +1,33 @@
+- date: 2026-04-19
+  codebase: "Clad"
+  version: "v2.3"
+  description: |
+    Clad 2.3 is now compatible with clang-11 through clang-21. This release
+    brings substantial improvements across both forward and reverse modes,
+    including expanded custom derivative support, new derivatives for standard
+    library functions like std::beta, std::expint, and std::comp_ellint, and
+    better handling of lambdas and nested differentiation. Reverse mode gains
+    basic OpenMP support, reduced overhead by skipping unnecessary reverse_forw
+    passes when custom pullbacks are available, and important correctness fixes
+    for nested Hessian computations and complex record adjoints. A major
+    highlight is the new dual-mode tape memory system, offering an in-memory
+    RAM-disk backend via mmap with automatic disk offloading, plus hooks for
+    user-defined tape implementations. Error estimation has been unified with
+    reverse mode behind a cleaner function-based interface, CUDA support is
+    stronger thanks to compute-sanitizer integration, and nearly 40 tracked
+    issues have been resolved.
+  link: "https://github.com/vgvassilev/clad/releases/tag/v2.3"
+
+- date: 2026-03-26
+  codebase: "CppInterOp"
+  version: "v1.9.0"
+  description: |
+    This release drops LLVM 18 support, adds CUDA/GPU support with automatic
+    SDK and architecture detection, improves introspection and type reflection
+    APIs, hardens the incremental C++ and dispatch infrastructure, and includes
+    ROOT-Cling integration changes for Cppyy.
+  link: "https://github.com/compiler-research/CppInterOp/releases/tag/v1.9.0"
+  
 - date: 2026-02-11
   codebase: "Cling"
   version: "v1.3"
